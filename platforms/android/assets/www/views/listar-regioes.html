@@ -1,0 +1,10 @@
+<ion-view title="Selecione a sua região">
+	<ion-content class="padding">
+		<div class="list">
+			<a class="item item-icon-right" collection-repeat="r in registros" href="#/propostas/{{r.uf}}">
+				{{ r.uf }} - {{ r.nome }}
+				<i class="icon ion-chevron-right"></i>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>

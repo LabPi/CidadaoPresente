@@ -1,0 +1,105 @@
+{
+  "name": "angular-input-masks",
+  "version": "2.2.0",
+  "description": "Personalized input masks for AngularJS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assisrafael/angular-input-masks.git"
+  },
+  "homepage": "http://github.com/assisrafael/angular-input-masks",
+  "scripts": {
+    "lint": "eslint *.js src/ config/ --fix",
+    "test:unit": "karma start config/karma.conf.js --single-run",
+    "test:unit:watch": "karma start config/karma.conf.js --auto-watch",
+    "test:e2e:prepare": "webdriver-manager update",
+    "test:e2e": "npm run test:e2e:prepare && protractor config/protractor.conf.js",
+    "test": "npm run test:unit && npm run test:e2e",
+    "ci": "npm run lint && npm run test",
+    "prepublish": "gulp build"
+  },
+  "keywords": [
+    "input",
+    "mask",
+    "angularjs"
+  ],
+  "author": {
+    "name": "igor.rafael@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "br-validations": "^0.2.4",
+    "moment": "^2.8.4",
+    "string-mask": "^0.2.0"
+  },
+  "devDependencies": {
+    "angular": "~1.3.16",
+    "angular-i18n": "~1.3.16",
+    "angular-mocks": "~1.3.16",
+    "browserify": "^13.0.0",
+    "browserify-istanbul": "^1.0.0",
+    "conventional-changelog": "0.0.17",
+    "eslint": "^2.2.0",
+    "express": "^4.8.5",
+    "gulp": "^3.9.0",
+    "gulp-bump": "^1.0.0",
+    "gulp-exit": "0.0.2",
+    "gulp-git": "^1.1.0",
+    "gulp-header": "^1.2.2",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.1.0",
+    "istanbul": "^0.4.2",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.13.21",
+    "karma-browserify": "^5.0.2",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "0.5.4",
+    "karma-coveralls": "^1.0.1",
+    "karma-jasmine": "^0.3.5",
+    "merge-stream": "^1.0.0",
+    "minimist": "^1.1.1",
+    "protractor": "^3.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webdriver-manager": "^8.0.0"
+  },
+  "files": [
+    "src/",
+    "releases/",
+    "index.js",
+    "br.js",
+    "us.js",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "gitHead": "9576b145a3a7c9a1f4700d927c0540a19ef65628",
+  "bugs": {
+    "url": "https://github.com/assisrafael/angular-input-masks/issues"
+  },
+  "_id": "angular-input-masks@2.2.0",
+  "_shasum": "02728087a53fd31a878fc9523130f3a5310acb2b",
+  "_from": "angular-input-masks@latest",
+  "_npmVersion": "2.15.2",
+  "_nodeVersion": "4.4.1",
+  "_npmUser": {
+    "name": "assisrafael",
+    "email": "igor.rafael@gmail.com"
+  },
+  "dist": {
+    "shasum": "02728087a53fd31a878fc9523130f3a5310acb2b",
+    "tarball": "https://registry.npmjs.org/angular-input-masks/-/angular-input-masks-2.2.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "assisrafael",
+      "email": "igor.rafael@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-input-masks-2.2.0.tgz_1459409975969_0.4334882600232959"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-input-masks/-/angular-input-masks-2.2.0.tgz"
+}

@@ -1,0 +1,63 @@
+<ion-view title="Denúncia">
+	<ion-content class="padding">
+
+        <span class="sucesso" ng-show="sucesso">Dados salvos com sucesso</span>
+
+        <form name="frmDenuncia" ng-submit="salvar(frmDenuncia)" novalidate>
+
+            <div class="padding">
+                <label class="item item-input">
+                    <input type="text" placeholder="Nome" name="nome" required ng-minlength="caracteres_minimos" ng-model="Denuncia.nome">
+                </label>
+                <span class="erro" ng-show="frmDenuncia.nome.$error.required && frmDenuncia.$submitted">O campo nome é obrigatório</span>
+            </div>
+
+            <div class="padding">
+                <label class="item item-input">
+                    <input type="email" placeholder="E-mail" name="email" ng-model="Denuncia.email" required>
+                </label>
+                <span class="erro" ng-show="frmDenuncia.email.$error.required && frmDenuncia.$submitted">O campo e-mail é obrigatório</span>
+                <span class="erro" ng-show="frmDenuncia.email.$error.email">Formáto inválido de e-mail</span>
+            </div>
+
+            <div class="padding">
+                <label class="item item-input">
+                    <input type="tel" placeholder="Telefone" name="telefone" ng-model="Denuncia.telefone" required ui-br-phone-number>
+                </label>
+                <span class="erro" ng-show="frmDenuncia.senha.$error.required && frmDenuncia.$submitted">O campo telefone é obrigatório</span>
+            </div>
+
+            <div class="padding">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                      Escolha um órgão para enviar a denúncia
+                    </div>
+                    <select ng-model="Denuncia.orgaoDestino">
+                        <option>Ministério Público</option>
+                        <option>Governo do Estado</option>
+                        <option>Tribunal de Justiça</option>
+                        <option>Tribunal de Contas</option>
+                        <option>Polícia Federal</option>
+                    </select>
+                </label>
+                <span class="erro" ng-show="frmDenuncia.senha.$error.required && frmDenuncia.$submitted">O campo telefone é obrigatório</span>
+            </div>
+
+            <div class="padding">
+                <label class="item item-input">
+                    <button type="button" class="button button-block" ng-hide="Denuncia.foto" ng-click="tirarFoto()">Tirar uma foto</button>
+                    <img ng-if="Denuncia.foto" ng-src="data:image/jpeg;base64, {{Denuncia.foto}}" class="full-image">
+                    <img ng-if="Denuncia.imagem" ng-src="{{Denuncia.imagem}}" class="full-image">
+                </label>
+            </div>
+
+            <div class="padding">
+            <!--  ng-disabled="!frmDenuncia.$valid" -->
+                <button type="submit" class="button button-block button-positive">Enviar denúncia!</button>
+                <button type="button" class="button button-block button-calm" ng-click="limpar(frmDenuncia)">Limpar</button>
+            </div>
+
+        </form>
+
+    </ion-content>
+</ion-view>
